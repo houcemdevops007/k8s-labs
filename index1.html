@@ -1310,6 +1310,122 @@
             font-weight: 600;
         }
 
+        /* PIN Modal */
+        .pin-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 340px;
+            background: rgba(15, 23, 42, 0.97);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            z-index: 1003;
+            padding: 32px;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .pin-modal.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .pin-modal .pin-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .pin-modal h3 {
+            color: #f1f5f9;
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+        }
+
+        .pin-modal p {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin: 0 0 20px;
+        }
+
+        .pin-input {
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            color: #f1f5f9;
+            font-size: 1.3rem;
+            text-align: center;
+            letter-spacing: 8px;
+            font-weight: 600;
+            outline: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+
+        .pin-input:focus {
+            border-color: #3b82f6;
+        }
+
+        .pin-input.error {
+            border-color: #ef4444;
+            animation: shake 0.4s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        .pin-error-msg {
+            color: #ef4444;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            min-height: 20px;
+        }
+
+        .pin-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .pin-actions button {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .pin-btn-cancel {
+            background: rgba(255, 255, 255, 0.04);
+            color: #94a3b8;
+        }
+
+        .pin-btn-cancel:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .pin-btn-submit {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border-color: transparent !important;
+        }
+
+        .pin-btn-submit:hover {
+            opacity: 0.9;
+        }
+
         /* Animations */
         @keyframes pulse {
             0%, 100% { opacity: 1; }
@@ -6280,6 +6396,20 @@ helm install nginx-ingress ingress-nginx/ingress-nginx \
         <div class="tp-manager-counter" id="tpManagerCounter"></div>
     </div>
 
+    <!-- PIN Modal -->
+    <div class="tp-manager-overlay" id="pinOverlay" onclick="closePinModal()"></div>
+    <div class="pin-modal" id="pinModal">
+        <div class="pin-icon">🔐</div>
+        <h3>Accès Formateur</h3>
+        <p>Entrez le code PIN pour gérer les TPs</p>
+        <input type="password" class="pin-input" id="pinInput" maxlength="4" placeholder="····" onkeydown="if(event.key==='Enter')submitPin()">
+        <div class="pin-error-msg" id="pinError"></div>
+        <div class="pin-actions">
+            <button class="pin-btn-cancel" onclick="closePinModal()">Annuler</button>
+            <button class="pin-btn-submit" onclick="submitPin()">Valider</button>
+        </div>
+    </div>
+
     <script>
         // Navigation
         function showSection(sectionId) {
@@ -6401,9 +6531,9 @@ helm install nginx-ingress ingress-nginx/ingress-nginx \
         function getTPVisibility() {
             const saved = localStorage.getItem('k8s-labs-tp-visibility');
             if (saved) return JSON.parse(saved);
-            // Default: all visible
+            // Default: only TP0 visible
             const defaults = {};
-            TP_LIST.forEach(tp => defaults[tp.id] = true);
+            TP_LIST.forEach(tp => defaults[tp.id] = (tp.id === 'tp0'));
             return defaults;
         }
 
@@ -6451,18 +6581,46 @@ helm install nginx-ingress ingress-nginx/ingress-nginx \
                 panel.classList.remove('active');
                 overlay.classList.remove('active');
             } else {
-                // Vérifier l'authentification
                 if (!isFormateurAuthenticated) {
-                    const pin = prompt('🔒 Accès Formateur\n\nEntrez le code PIN :');
-                    if (pin !== FORMATEUR_PIN) {
-                        if (pin !== null) alert('❌ Code PIN incorrect.');
-                        return;
-                    }
-                    isFormateurAuthenticated = true;
+                    showPinModal();
+                    return;
                 }
-                buildTPManagerList();
-                panel.classList.add('active');
-                overlay.classList.add('active');
+                openTPPanel();
+            }
+        }
+
+        function openTPPanel() {
+            buildTPManagerList();
+            document.getElementById('tpManagerPanel').classList.add('active');
+            document.querySelector('.tp-manager-overlay').classList.add('active');
+        }
+
+        function showPinModal() {
+            document.getElementById('pinModal').classList.add('active');
+            document.getElementById('pinOverlay').classList.add('active');
+            document.getElementById('pinInput').value = '';
+            document.getElementById('pinError').textContent = '';
+            document.getElementById('pinInput').classList.remove('error');
+            setTimeout(() => document.getElementById('pinInput').focus(), 100);
+        }
+
+        function closePinModal() {
+            document.getElementById('pinModal').classList.remove('active');
+            document.getElementById('pinOverlay').classList.remove('active');
+        }
+
+        function submitPin() {
+            const input = document.getElementById('pinInput');
+            const error = document.getElementById('pinError');
+            if (input.value === FORMATEUR_PIN) {
+                isFormateurAuthenticated = true;
+                closePinModal();
+                openTPPanel();
+            } else {
+                input.classList.add('error');
+                error.textContent = '❌ Code PIN incorrect';
+                input.value = '';
+                setTimeout(() => input.classList.remove('error'), 400);
             }
         }
 
