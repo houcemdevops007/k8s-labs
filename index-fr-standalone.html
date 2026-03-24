@@ -1168,6 +1168,15 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="#tp0" class="nav-link" onclick="showSection('tp0')">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                            <span class="nav-text">TP 0: Cluster Ansible</span>
+                            <span class="nav-badge new">Nouveau</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#tp1" class="nav-link" onclick="showSection('tp1')">
                             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="4" y="4" width="16" height="16" rx="2"/>
@@ -1293,6 +1302,14 @@
                                 <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/>
                             </svg>
                             <span class="nav-text">TP 16: Namespaces & Quotas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tp17" class="nav-link" onclick="showSection('tp17')">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <span class="nav-text">TP 17: API Gateway</span>
                             <span class="nav-badge new">Nouveau</span>
                         </a>
                     </li>
@@ -1319,23 +1336,23 @@
                         Du Pod au déploiement complet, apprenez par la pratique.
                     </p>
                     <div class="btn-group">
-                        <a href="#tp1" class="btn btn-primary" onclick="showSection('tp1')">
+                        <a href="#tp0" class="btn btn-primary" onclick="showSection('tp0')">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polygon points="5 3 19 12 5 21 5 3"/>
                             </svg>
-                            Commencer le TP 1
+                            Nouveau: TP 0 - Cluster K8s avec Ansible
                         </a>
-                        <a href="#tp16" class="btn btn-secondary" onclick="showSection('tp16')">
+                        <a href="#tp1" class="btn btn-secondary" onclick="showSection('tp1')">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/>
+                                <rect x="4" y="4" width="16" height="16" rx="2"/>
                             </svg>
-                            Nouveau: TP 16 - Namespaces & Quotas
+                            Commencer le TP 1 - Pods
                         </a>
                     </div>
 
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <div class="stat-value">16</div>
+                            <div class="stat-value">18</div>
                             <div class="stat-label">Travaux Pratiques</div>
                         </div>
                         <div class="stat-item">
@@ -1351,6 +1368,25 @@
 
                 <h2>Explorer tous les Labs</h2>
                 <div class="card-grid">
+                    <div class="card" onclick="showSection('tp0')">
+                        <div class="card-header">
+                            <div class="card-icon" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge">Infrastructure</span>
+                        </div>
+                        <h3 class="card-title">TP 0: Cluster K8s avec Ansible</h3>
+                        <p class="card-description">Déployez un cluster Kubernetes v1.28 complet avec un rôle Ansible automatisé.</p>
+                        <div class="card-footer">
+                            <div class="card-meta">
+                                <span>⏱️ 90 min</span>
+                                <span>📚 7 étapes</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card" onclick="showSection('tp1')">
                         <div class="card-header">
                             <div class="card-icon">
@@ -1472,7 +1508,7 @@
                                     <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/>
                                 </svg>
                             </div>
-                            <span class="card-badge new">Nouveau</span>
+                            <span class="card-badge">Avancé</span>
                         </div>
                         <h3 class="card-title">TP 16: Namespaces & Quotas</h3>
                         <p class="card-description">Isolation des ressources avec Namespaces, ResourceQuota et LimitRange.</p>
@@ -1483,6 +1519,735 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card" onclick="showSection('tp17')">
+                        <div class="card-header">
+                            <div class="card-icon" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge new">Nouveau</span>
+                        </div>
+                        <h3 class="card-title">TP 17: API Gateway</h3>
+                        <p class="card-description">Concepts, différences avec Ingress et mise en pratique avec Kong et Nginx Ingress Controller.</p>
+                        <div class="card-footer">
+                            <div class="card-meta">
+                                <span>⏱️ 90 min</span>
+                                <span>📚 6 sections</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TP 0: CLUSTER K8S AVEC ANSIBLE -->
+            <section id="tp0" class="section">
+                <nav class="breadcrumb">
+                    <a href="#home" onclick="showSection('home')">Accueil</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current">TP 0: Cluster K8s avec Ansible</span>
+                </nav>
+
+                <h1>TP 0: Mise en place d'un Cluster Kubernetes v1.28 avec Ansible</h1>
+                
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Objectifs du TP
+                    </div>
+                    <p>Déployez automatiquement un cluster Kubernetes v1.28 complet (1 master + workers) à l'aide d'un rôle Ansible. Vous apprendrez à configurer l'inventaire, personnaliser les variables, exécuter le playbook et vérifier le bon fonctionnement du cluster.</p>
+                </div>
+
+                <div class="info-box warning">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/>
+                        </svg>
+                        Durée estimée : 90 minutes | Difficulté : Intermédiaire
+                    </div>
+                    <p>Ce TP nécessite des machines Linux accessibles via SSH et Ansible installé sur la machine de contrôle.</p>
+                </div>
+
+                <h2>Prérequis</h2>
+
+                <p>Avant de commencer, assurez-vous d'avoir les éléments suivants :</p>
+                <ul>
+                    <li><strong>Machines Linux</strong> : Ubuntu/Debian (recommandé) ou CentOS — au minimum 2 machines (1 master + 1 worker)</li>
+                    <li><strong>Accès SSH</strong> : L'utilisateur de contrôle doit pouvoir se connecter en SSH sans mot de passe (clés SSH configurées)</li>
+                    <li><strong>Ansible installé</strong> sur la machine de contrôle (version 2.9+)</li>
+                    <li><strong>Git installé</strong> sur la machine de contrôle</li>
+                    <li><strong>Droits sudo</strong> sur les machines cibles (master et worker)</li>
+                    <li><strong>Connectivité réseau</strong> entre toutes les machines et accès à Internet</li>
+                </ul>
+
+                <div class="info-box success">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Configuration recommandée par machine
+                    </div>
+                    <p>CPU : 2 vCPUs minimum | RAM : 2 Go minimum | Disque : 20 Go | OS : Ubuntu 22.04 LTS</p>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Vérification des prérequis</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>ansible --version</div>
+                        <div class="terminal-line"><span class="terminal-output">ansible [core 2.15.x]</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>git --version</div>
+                        <div class="terminal-line"><span class="terminal-output">git version 2.x.x</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>ssh user@172.16.201.22 "hostname"</div>
+                        <div class="terminal-line"><span class="terminal-output">master-node</span></div>
+                    </div>
+                </div>
+
+                <h2>Étape 1 — Cloner le rôle Ansible</h2>
+
+                <p>Commencez par récupérer le rôle Ansible qui automatise l'installation complète du cluster Kubernetes v1.28.</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>git clone https://repo-dev.efi-academy.com/houcem/ansible-k8as-v1.28.git
+cd ansible-k8as-v1.28</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>git clone https://repo-dev.efi-academy.com/houcem/ansible-k8as-v1.28.git</div>
+                        <div class="terminal-line"><span class="terminal-output">Cloning into 'ansible-k8as-v1.28'...</span></div>
+                        <div class="terminal-line"><span class="terminal-output">remote: Enumerating objects: 42, done.</span></div>
+                        <div class="terminal-line"><span class="terminal-output">remote: Total 42 (delta 0), reused 0 (delta 0)</span></div>
+                        <div class="terminal-line"><span class="terminal-output">Unpacking objects: 100% (42/42), done.</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>cd ansible-k8as-v1.28</div>
+                    </div>
+                </div>
+
+                <h2>Étape 2 — Structure du rôle Ansible</h2>
+
+                <p>Explorons l'arborescence du projet cloné. Le rôle est organisé en <strong>3 sous-rôles</strong> qui s'occupent de configurer les différentes parties du cluster :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">STRUCTURE</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>ansible-k8as-v1.28/
+├── ansible.cfg          # Configuration Ansible (SSH, timeouts)
+├── hosts.ini            # Inventaire des machines (master & workers)
+├── main.yaml            # Playbook principal
+└── roles/
+    ├── common/          # Rôle commun (tous les nœuds)
+    │   ├── defaults/
+    │   │   └── main.yml     # Variables par défaut (versions K8s)
+    │   ├── handlers/
+    │   │   └── main.yml     # Handlers (restart containerd)
+    │   ├── tasks/
+    │   │   └── main.yml     # Tâches : dépendances, swap, containerd, kubeadm
+    │   └── templates/
+    │       └── containerd-config.toml.j2  # Template containerd
+    ├── master/          # Rôle master
+    │   ├── meta/
+    │   │   └── main.yml     # Dépendance vers rôle common
+    │   └── tasks/
+    │       └── main.yml     # kubeadm init, kubeconfig, CNI Calico, join token
+    └── worker/          # Rôle worker
+        ├── meta/
+        │   └── main.yml     # Dépendance vers rôle common
+        └── tasks/
+            └── main.yml     # Copie et exécution du join command</code></pre>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rôle</th>
+                                <th>Description</th>
+                                <th>Actions principales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>common</code></td>
+                                <td>Préparation de tous les nœuds</td>
+                                <td>Désactivation swap, installation containerd, kubeadm/kubelet/kubectl, configuration réseau (sysctl, modules kernel)</td>
+                            </tr>
+                            <tr>
+                                <td><code>master</code></td>
+                                <td>Initialisation du nœud master</td>
+                                <td>kubeadm init, copie kubeconfig, installation CNI Calico, génération du join command</td>
+                            </tr>
+                            <tr>
+                                <td><code>worker</code></td>
+                                <td>Jonction des nœuds workers</td>
+                                <td>Copie et exécution du join command généré par le master</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Étape 3 — Configurer l'inventaire Ansible</h2>
+
+                <p>L'inventaire définit les machines cibles du déploiement. Modifiez le fichier <code>hosts.ini</code> avec les adresses IP de vos machines :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">INI</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># hosts.ini</span>
+<span class="key">[all:vars]</span>
+<span class="key">ansible_python_interpreter</span>=<span class="string">/usr/bin/python3.11</span>
+<span class="key">ansible_user</span>=<span class="string">adminefi</span>
+
+<span class="key">[master]</span>
+<span class="string">master-node</span> <span class="key">ansible_host</span>=<span class="string">172.16.201.22</span>
+
+<span class="key">[worker]</span>
+<span class="string">worker-node1</span> <span class="key">ansible_host</span>=<span class="string">172.16.201.23</span></code></pre>
+                </div>
+
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Personnalisation
+                    </div>
+                    <p>Remplacez les adresses IP et le nom d'utilisateur (<code>adminefi</code>) par ceux de votre environnement. Vous pouvez ajouter autant de workers que nécessaire dans le groupe <code>[worker]</code>.</p>
+                </div>
+
+                <p>Vérifiez que la connectivité Ansible fonctionne correctement :</p>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>ansible all -i hosts.ini -m ping</div>
+                        <div class="terminal-line"><span class="terminal-output">master-node | SUCCESS => {</span></div>
+                        <div class="terminal-line"><span class="terminal-output">    "changed": false,</span></div>
+                        <div class="terminal-line"><span class="terminal-output">    "ping": "pong"</span></div>
+                        <div class="terminal-line"><span class="terminal-output">}</span></div>
+                        <div class="terminal-line"><span class="terminal-output">worker-node1 | SUCCESS => {</span></div>
+                        <div class="terminal-line"><span class="terminal-output">    "changed": false,</span></div>
+                        <div class="terminal-line"><span class="terminal-output">    "ping": "pong"</span></div>
+                        <div class="terminal-line"><span class="terminal-output">}</span></div>
+                    </div>
+                </div>
+
+                <h2>Étape 4 — Configurer les variables du rôle</h2>
+
+                <p>Les variables par défaut du rôle se trouvent dans <code>roles/common/defaults/main.yml</code>. Vous pouvez les personnaliser selon vos besoins :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># roles/common/defaults/main.yml</span>
+<span class="key">kubernetes_version</span>: <span class="string">"1.28.0"</span>
+<span class="key">containerd_version</span>: <span class="string">"1.6.9"</span></code></pre>
+                </div>
+
+                <p>Examinons également le playbook principal <code>main.yaml</code> :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># main.yaml</span>
+- <span class="key">hosts</span>: <span class="string">master</span>
+  <span class="key">become</span>: <span class="boolean">yes</span>
+  <span class="key">remote_user</span>: <span class="string">adminefi</span>
+  <span class="key">roles</span>:
+    - <span class="string">master</span>
+
+- <span class="key">hosts</span>: <span class="string">worker</span>
+  <span class="key">become</span>: <span class="boolean">yes</span>
+  <span class="key">remote_user</span>: <span class="string">adminefi</span>
+  <span class="key">roles</span>:
+    - <span class="string">worker</span></code></pre>
+                </div>
+
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Fonctionnement du playbook
+                    </div>
+                    <p>Le playbook exécute d'abord le rôle <code>master</code> (qui dépend de <code>common</code>) pour initialiser le nœud master, puis exécute le rôle <code>worker</code> (qui dépend aussi de <code>common</code>) pour joindre les workers au cluster. Le réseau CNI utilisé est <strong>Calico v3.26.1</strong>.</p>
+                </div>
+
+                <h2>Étape 5 — Lancer le playbook Ansible</h2>
+
+                <p>C'est l'étape principale ! Lancez le déploiement complet du cluster avec la commande suivante :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>ansible-playbook -i hosts.ini main.yaml</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Exécution du playbook</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>ansible-playbook -i hosts.ini main.yaml</div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">PLAY [master] *****************************************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [common : Install dependencies] ******************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">ok: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [common : Disable swap] **************************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">changed: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [common : Install containerd] ********************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">ok: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [common : Install Kubernetes components] *********************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">ok: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [master : Initialize the Kubernetes cluster using kubeadm] ***************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">changed: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [master : Install flannel pod network] ***********************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">changed: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [master : Generate join command] *****************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">changed: [master-node]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">PLAY [worker] *****************************************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">TASK [worker : Join the node to cluster] **************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">changed: [worker-node1]</span></div>
+                        <div class="terminal-line"><span class="terminal-output"></span></div>
+                        <div class="terminal-line"><span class="terminal-output">PLAY RECAP *********************************************************************</span></div>
+                        <div class="terminal-line"><span class="terminal-output">master-node  : ok=15  changed=10  unreachable=0  failed=0  skipped=0</span></div>
+                        <div class="terminal-line"><span class="terminal-output">worker-node1 : ok=12  changed=8   unreachable=0  failed=0  skipped=0</span></div>
+                    </div>
+                </div>
+
+                <div class="info-box warning">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/>
+                        </svg>
+                        Note importante
+                    </div>
+                    <p>L'exécution du playbook peut prendre entre <strong>5 et 15 minutes</strong> selon la vitesse de connexion Internet et les performances des machines. Ne l'interrompez pas pendant l'exécution.</p>
+                </div>
+
+                <h2>Étape 6 — Vérifier le cluster</h2>
+
+                <p>Une fois le playbook terminé avec succès, connectez-vous au <strong>nœud master</strong> et vérifiez l'état du cluster :</p>
+
+                <h3>Vérifier les nœuds</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl get nodes</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Master Node</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get nodes</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME           STATUS   ROLES           AGE   VERSION</span></div>
+                        <div class="terminal-line"><span class="terminal-output">master-node    Ready    control-plane   5m    v1.28.0</span></div>
+                        <div class="terminal-line"><span class="terminal-output">worker-node1   Ready    &lt;none&gt;          3m    v1.28.0</span></div>
+                    </div>
+                </div>
+
+                <h3>Vérifier les pods système</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl get pods -A</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Master Node</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get pods -A</div>
+                        <div class="terminal-line"><span class="terminal-output">NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   calico-kube-controllers-7c968b5878-x2j4k   1/1     Running   0          4m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   calico-node-abc12                          1/1     Running   0          4m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   calico-node-def34                          1/1     Running   0          3m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   coredns-5dd5756b68-abc12                   1/1     Running   0          5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   coredns-5dd5756b68-def34                   1/1     Running   0          5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   etcd-master-node                           1/1     Running   0          5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   kube-apiserver-master-node                 1/1     Running   0          5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   kube-controller-manager-master-node        1/1     Running   0          5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   kube-proxy-abc12                           1/1     Running   0          5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   kube-proxy-def34                           1/1     Running   0          3m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kube-system   kube-scheduler-master-node                 1/1     Running   0          5m</span></div>
+                    </div>
+                </div>
+
+                <h3>Informations du cluster</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl cluster-info</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Master Node</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl cluster-info</div>
+                        <div class="terminal-line"><span class="terminal-output">Kubernetes control plane is running at https://172.16.201.22:6443</span></div>
+                        <div class="terminal-line"><span class="terminal-output">CoreDNS is running at https://172.16.201.22:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy</span></div>
+                    </div>
+                </div>
+
+                <div class="info-box success">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Cluster opérationnel !
+                    </div>
+                    <p>Si tous les nœuds sont en status <code>Ready</code> et que tous les pods système sont en <code>Running</code>, votre cluster Kubernetes est prêt à l'emploi.</p>
+                </div>
+
+                <h2>Étape 7 — Tests fonctionnels</h2>
+
+                <p>Vérifions que le cluster fonctionne correctement en déployant une application de test.</p>
+
+                <h3>Déployer un pod nginx</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Créer un déploiement nginx
+kubectl create deployment nginx-test --image=nginx:latest
+
+# Vérifier que le pod est en cours d'exécution
+kubectl get pods -o wide
+
+# Exposer le déploiement via un service NodePort
+kubectl expose deployment nginx-test --type=NodePort --port=80
+
+# Vérifier le service créé
+kubectl get svc nginx-test</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Tests fonctionnels</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl create deployment nginx-test --image=nginx:latest</div>
+                        <div class="terminal-line"><span class="terminal-output">deployment.apps/nginx-test created</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get pods -o wide</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">nginx-test-7c5b8d6c-abc12   1/1     Running   0          30s   10.244.1.2    worker-node1</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl expose deployment nginx-test --type=NodePort --port=80</div>
+                        <div class="terminal-line"><span class="terminal-output">service/nginx-test exposed</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get svc nginx-test</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME         TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">nginx-test   NodePort   10.96.142.100   &lt;none&gt;        80:31234/TCP   5s</span></div>
+                    </div>
+                </div>
+
+                <h3>Tester l'accès au service</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Tester depuis le master (via le ClusterIP)
+curl http://10.96.142.100:80
+
+# Tester depuis n'importe quelle machine du réseau (via NodePort)
+curl http://172.16.201.22:31234
+curl http://172.16.201.23:31234</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Vérification</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl -s http://172.16.201.22:31234 | head -5</div>
+                        <div class="terminal-line"><span class="terminal-output">&lt;!DOCTYPE html&gt;</span></div>
+                        <div class="terminal-line"><span class="terminal-output">&lt;html&gt;</span></div>
+                        <div class="terminal-line"><span class="terminal-output">&lt;head&gt;</span></div>
+                        <div class="terminal-line"><span class="terminal-output">&lt;title&gt;Welcome to nginx!&lt;/title&gt;</span></div>
+                        <div class="terminal-line"><span class="terminal-output">&lt;style&gt;</span></div>
+                    </div>
+                </div>
+
+                <h3>Nettoyage des ressources de test</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Supprimer le service et le déploiement de test
+kubectl delete svc nginx-test
+kubectl delete deployment nginx-test</code></pre>
+                </div>
+
+                <h2>Commandes utiles</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Commande</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>ansible all -i hosts.ini -m ping</code></td>
+                                <td>Tester la connectivité Ansible</td>
+                            </tr>
+                            <tr>
+                                <td><code>ansible-playbook -i hosts.ini main.yaml --check</code></td>
+                                <td>Simuler l'exécution du playbook (dry run)</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get nodes -o wide</code></td>
+                                <td>Détails des nœuds (IP, OS, version)</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get pods -A</code></td>
+                                <td>Tous les pods de tous les namespaces</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl cluster-info</code></td>
+                                <td>Informations du control plane</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl describe node &lt;name&gt;</code></td>
+                                <td>Détails complets d'un nœud</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubeadm token create --print-join-command</code></td>
+                                <td>Régénérer la commande join (sur le master)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Checklist de Progression</h2>
+
+                <div class="checklist">
+                    <div class="checklist-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Étapes complétées
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Vérifier les prérequis (SSH, Ansible, Git)</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Cloner le rôle Ansible</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Comprendre la structure du rôle</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Configurer l'inventaire Ansible</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Personnaliser les variables du rôle</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Exécuter le playbook avec succès</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Vérifier le cluster (nodes, pods, cluster-info)</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Déployer et tester nginx via NodePort</span>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="#home" class="nav-btn" onclick="showSection('home')">
+                        <div class="nav-btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            </svg>
+                        </div>
+                        <div class="nav-btn-text">
+                            <div class="nav-btn-label">Retour</div>
+                            <span class="nav-btn-title">Accueil</span>
+                        </div>
+                    </a>
+                    <a href="#tp1" class="nav-btn" onclick="showSection('tp1')">
+                        <div class="nav-btn-text" style="text-align: right;">
+                            <div class="nav-btn-label">Suivant</div>
+                            <span class="nav-btn-title">TP 1: Pods</span>
+                        </div>
+                        <div class="nav-btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"/>
+                            </svg>
+                        </div>
+                    </a>
                 </div>
             </section>
 
@@ -1936,6 +2701,813 @@
                             <span class="nav-btn-title">TP 15: HPA</span>
                         </div>
                     </a>
+                    <a href="#tp17" class="nav-btn" onclick="showSection('tp17')">
+                        <div class="nav-btn-text" style="text-align: right;">
+                            <div class="nav-btn-label">Suivant</div>
+                            <span class="nav-btn-title">TP 17: API Gateway</span>
+                        </div>
+                        <div class="nav-btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- TP 17: API GATEWAY -->
+            <section id="tp17" class="section">
+                <nav class="breadcrumb">
+                    <a href="#home" onclick="showSection('home')">Accueil</a>
+                    <span class="breadcrumb-separator">›</span>
+                    <span class="breadcrumb-current">TP 17: API Gateway</span>
+                </nav>
+
+                <h1>TP 17: API Gateway dans Kubernetes — Concepts, Ingress vs Gateway &amp; Mise en Pratique</h1>
+
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Objectifs du TP
+                    </div>
+                    <p>Comprendre les différences entre un Ingress Controller et une API Gateway, déployer deux applications de test, les exposer via Nginx Ingress puis via Kong API Gateway avec rate-limiting, et comparer les deux approches en production.</p>
+                </div>
+
+                <div class="info-box warning">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/>
+                        </svg>
+                        Durée estimée : 90 minutes | Difficulté : Avancé
+                    </div>
+                    <p>Ce TP nécessite un cluster Kubernetes fonctionnel avec <code>kubectl</code> et <code>helm</code> installés.</p>
+                </div>
+
+                <h2>1. Concepts théoriques</h2>
+
+                <h3>Qu'est-ce qu'un Ingress ?</h3>
+                <p>Un <strong>Ingress</strong> dans Kubernetes est une ressource qui gère l'accès externe aux services du cluster, principalement via HTTP/HTTPS. Il fonctionne grâce à deux composants :</p>
+                <ul>
+                    <li><strong>Ingress Resource</strong> : un objet Kubernetes qui définit les règles de routage (host, path → service)</li>
+                    <li><strong>Ingress Controller</strong> : le composant qui implémente réellement ces règles (Nginx, Traefik, HAProxy, etc.)</li>
+                </ul>
+                <p><strong>Limites de l'Ingress :</strong></p>
+                <ul>
+                    <li>Pas de gestion native de l'authentification avancée (OAuth2, JWT, mTLS)</li>
+                    <li>Pas de rate limiting intégré</li>
+                    <li>Pas de transformation de requêtes/réponses</li>
+                    <li>Pas de circuit breaker natif</li>
+                    <li>Observabilité limitée aux logs et métriques basiques</li>
+                </ul>
+
+                <h3>Qu'est-ce qu'une API Gateway ?</h3>
+                <p>Une <strong>API Gateway</strong> est un point d'entrée centralisé et intelligent pour les APIs. Elle offre des fonctionnalités bien au-delà du simple routage :</p>
+                <ul>
+                    <li><strong>Authentification &amp; Autorisation</strong> : OAuth2, JWT, API Keys, mTLS</li>
+                    <li><strong>Rate Limiting</strong> : contrôle du débit des requêtes par client/route</li>
+                    <li><strong>Circuit Breaker</strong> : protection contre les services défaillants</li>
+                    <li><strong>Transformation</strong> : modification des requêtes/réponses en transit</li>
+                    <li><strong>Observabilité</strong> : métriques détaillées, tracing distribué, logging structuré</li>
+                </ul>
+
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        API Gateways dans l'écosystème Kubernetes
+                    </div>
+                    <p><strong>Kong</strong>, <strong>Traefik Hub</strong>, <strong>APISIX</strong>, <strong>AWS API Gateway</strong>, <strong>KrakenD</strong>, <strong>Istio Gateway</strong>, <strong>Envoy Gateway</strong></p>
+                </div>
+
+                <h3>Tableau comparatif : Ingress vs API Gateway</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Critère</th>
+                                <th>Ingress (Nginx)</th>
+                                <th>API Gateway (Kong)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Routage HTTP/HTTPS</strong></td>
+                                <td>✅ Natif (host, path)</td>
+                                <td>✅ Avancé (regex, headers, méthodes)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Authentification &amp; Autorisation</strong></td>
+                                <td>⚠️ Basic Auth, External Auth</td>
+                                <td>✅ OAuth2, JWT, API Keys, mTLS, LDAP</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rate Limiting</strong></td>
+                                <td>⚠️ Annotations limitées</td>
+                                <td>✅ Plugin natif (par route, consumer, IP)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transformation requêtes/réponses</strong></td>
+                                <td>❌ Non supporté</td>
+                                <td>✅ Plugins Request/Response Transformer</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Circuit Breaker</strong></td>
+                                <td>❌ Non supporté</td>
+                                <td>✅ Plugin natif</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Observabilité avancée</strong></td>
+                                <td>⚠️ Métriques/logs basiques</td>
+                                <td>✅ Prometheus, Datadog, OpenTelemetry</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Complexité de mise en place</strong></td>
+                                <td>✅ Simple et rapide</td>
+                                <td>⚠️ Plus complexe, plus de configuration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cas d'usage recommandé</strong></td>
+                                <td>Sites web, apps simples</td>
+                                <td>APIs REST/GraphQL, microservices complexes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>2. Schéma d'architecture</h2>
+
+                <p>Le flux de trafic diffère selon l'approche choisie :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">ARCHITECTURE</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                        APPROCHE INGRESS                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Client ──▶ Nginx Ingress Controller ──┬──▶ hello-kubernetes-first  (3 pods)
+│              (routage HTTP basique)     │
+│                                        └──▶ hello-kubernetes-second (3 pods)
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      APPROCHE API GATEWAY                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Client ──▶ Kong API Gateway ──────────┬──▶ hello-kubernetes-first  (3 pods)
+│              ┌──────────────┐          │
+│              │ Rate Limiting│          └──▶ hello-kubernetes-second (3 pods)
+│              │ Auth plugins │
+│              │ Observability│
+│              └──────────────┘
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+                </div>
+
+                <h2>3. Mise en pratique — Déploiement des applications</h2>
+
+                <p>Commençons par déployer deux applications de test qui affichent chacune un message différent.</p>
+
+                <h3>Application 1 : hello-kubernetes-first</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># hello1.yaml</span>
+<span class="key">apiVersion</span>: <span class="string">v1</span>
+<span class="key">kind</span>: <span class="string">Service</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">hello-kubernetes-first</span>
+<span class="key">spec</span>:
+  <span class="key">type</span>: <span class="string">ClusterIP</span>
+  <span class="key">ports</span>:
+  - <span class="key">port</span>: <span class="number">80</span>
+    <span class="key">targetPort</span>: <span class="number">8080</span>
+  <span class="key">selector</span>:
+    <span class="key">app</span>: <span class="string">hello-kubernetes-first</span>
+---
+<span class="key">apiVersion</span>: <span class="string">apps/v1</span>
+<span class="key">kind</span>: <span class="string">Deployment</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">hello-kubernetes-first</span>
+<span class="key">spec</span>:
+  <span class="key">replicas</span>: <span class="number">3</span>
+  <span class="key">selector</span>:
+    <span class="key">matchLabels</span>:
+      <span class="key">app</span>: <span class="string">hello-kubernetes-first</span>
+  <span class="key">template</span>:
+    <span class="key">metadata</span>:
+      <span class="key">labels</span>:
+        <span class="key">app</span>: <span class="string">hello-kubernetes-first</span>
+    <span class="key">spec</span>:
+      <span class="key">containers</span>:
+      - <span class="key">name</span>: <span class="string">hello-kubernetes</span>
+        <span class="key">image</span>: <span class="string">paulbouwer/hello-kubernetes:1.10</span>
+        <span class="key">ports</span>:
+        - <span class="key">containerPort</span>: <span class="number">8080</span>
+        <span class="key">env</span>:
+        - <span class="key">name</span>: <span class="string">MESSAGE</span>
+          <span class="key">value</span>: <span class="string">Hello from the first deployment!</span></code></pre>
+                </div>
+
+                <h3>Application 2 : hello-kubernetes-second</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># hello2.yaml</span>
+<span class="key">apiVersion</span>: <span class="string">v1</span>
+<span class="key">kind</span>: <span class="string">Service</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">hello-kubernetes-second</span>
+<span class="key">spec</span>:
+  <span class="key">type</span>: <span class="string">ClusterIP</span>
+  <span class="key">ports</span>:
+  - <span class="key">port</span>: <span class="number">80</span>
+    <span class="key">targetPort</span>: <span class="number">8080</span>
+  <span class="key">selector</span>:
+    <span class="key">app</span>: <span class="string">hello-kubernetes-second</span>
+---
+<span class="key">apiVersion</span>: <span class="string">apps/v1</span>
+<span class="key">kind</span>: <span class="string">Deployment</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">hello-kubernetes-second</span>
+<span class="key">spec</span>:
+  <span class="key">replicas</span>: <span class="number">3</span>
+  <span class="key">selector</span>:
+    <span class="key">matchLabels</span>:
+      <span class="key">app</span>: <span class="string">hello-kubernetes-second</span>
+  <span class="key">template</span>:
+    <span class="key">metadata</span>:
+      <span class="key">labels</span>:
+        <span class="key">app</span>: <span class="string">hello-kubernetes-second</span>
+    <span class="key">spec</span>:
+      <span class="key">containers</span>:
+      - <span class="key">name</span>: <span class="string">hello-kubernetes</span>
+        <span class="key">image</span>: <span class="string">paulbouwer/hello-kubernetes:1.10</span>
+        <span class="key">ports</span>:
+        - <span class="key">containerPort</span>: <span class="number">8080</span>
+        <span class="key">env</span>:
+        - <span class="key">name</span>: <span class="string">MESSAGE</span>
+          <span class="key">value</span>: <span class="string">Hello from the second deployment!</span></code></pre>
+                </div>
+
+                <h3>Déployer les deux applications</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl apply -f hello1.yaml
+kubectl apply -f hello2.yaml</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl apply -f hello1.yaml</div>
+                        <div class="terminal-line"><span class="terminal-output">service/hello-kubernetes-first created</span></div>
+                        <div class="terminal-line"><span class="terminal-output">deployment.apps/hello-kubernetes-first created</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl apply -f hello2.yaml</div>
+                        <div class="terminal-line"><span class="terminal-output">service/hello-kubernetes-second created</span></div>
+                        <div class="terminal-line"><span class="terminal-output">deployment.apps/hello-kubernetes-second created</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get pods</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                                       READY   STATUS    RESTARTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kubernetes-first-7c5b8d6c-abc12      1/1     Running   0          30s</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kubernetes-first-7c5b8d6c-def34      1/1     Running   0          30s</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kubernetes-first-7c5b8d6c-ghi56      1/1     Running   0          30s</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kubernetes-second-8d6e9f7a-jkl78     1/1     Running   0          25s</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kubernetes-second-8d6e9f7a-mno90     1/1     Running   0          25s</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kubernetes-second-8d6e9f7a-pqr12     1/1     Running   0          25s</span></div>
+                    </div>
+                </div>
+
+                <h2>4. Exposition via Ingress (approche classique)</h2>
+
+                <h3>Installer le Nginx Ingress Controller</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm upgrade --install ingress-nginx ingress-nginx \</div>
+                        <div class="terminal-line"><span class="terminal-output">  --repo https://kubernetes.github.io/ingress-nginx \</span></div>
+                        <div class="terminal-line"><span class="terminal-output">  --namespace ingress-nginx --create-namespace</span></div>
+                        <div class="terminal-line"><span class="terminal-output">Release "ingress-nginx" has been upgraded. Happy Helming!</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get pods -n ingress-nginx</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                                        READY   STATUS    RESTARTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">ingress-nginx-controller-5d88495688-x2j4k   1/1     Running   0          45s</span></div>
+                    </div>
+                </div>
+
+                <h3>Créer la ressource Ingress</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># ingress.yaml</span>
+<span class="key">apiVersion</span>: <span class="string">networking.k8s.io/v1</span>
+<span class="key">kind</span>: <span class="string">Ingress</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">hello-ingress</span>
+  <span class="key">annotations</span>:
+    <span class="key">nginx.ingress.kubernetes.io/rewrite-target</span>: <span class="string">/</span>
+<span class="key">spec</span>:
+  <span class="key">ingressClassName</span>: <span class="string">nginx</span>
+  <span class="key">rules</span>:
+  - <span class="key">http</span>:
+      <span class="key">paths</span>:
+      - <span class="key">path</span>: <span class="string">/hello1</span>
+        <span class="key">pathType</span>: <span class="string">Prefix</span>
+        <span class="key">backend</span>:
+          <span class="key">service</span>:
+            <span class="key">name</span>: <span class="string">hello-kubernetes-first</span>
+            <span class="key">port</span>:
+              <span class="key">number</span>: <span class="number">80</span>
+      - <span class="key">path</span>: <span class="string">/hello2</span>
+        <span class="key">pathType</span>: <span class="string">Prefix</span>
+        <span class="key">backend</span>:
+          <span class="key">service</span>:
+            <span class="key">name</span>: <span class="string">hello-kubernetes-second</span>
+            <span class="key">port</span>:
+              <span class="key">number</span>: <span class="number">80</span></code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl apply -f ingress.yaml</code></pre>
+                </div>
+
+                <h3>Vérification de l'Ingress</h3>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Vérification Ingress</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get ingress</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME            CLASS   HOSTS   ADDRESS          PORTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-ingress   nginx   *       192.168.49.100   80      30s</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl http://&lt;INGRESS_IP&gt;/hello1</div>
+                        <div class="terminal-line"><span class="terminal-output">Hello from the first deployment!</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl http://&lt;INGRESS_IP&gt;/hello2</div>
+                        <div class="terminal-line"><span class="terminal-output">Hello from the second deployment!</span></div>
+                    </div>
+                </div>
+
+                <div class="info-box success">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Ingress fonctionnel !
+                    </div>
+                    <p>Les deux services sont accessibles via l'Ingress Nginx. Pour obtenir l'IP de l'Ingress : <code>kubectl get svc -n ingress-nginx</code></p>
+                </div>
+
+                <h2>5. Exposition via API Gateway (Kong)</h2>
+
+                <h3>Installer Kong Ingress Controller</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Ajouter le repo Helm de Kong
+helm repo add kong https://charts.konghq.com
+helm repo update
+
+# Installer Kong Ingress Controller
+helm install kong kong/ingress -n kong --create-namespace</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm install kong kong/ingress -n kong --create-namespace</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME: kong</span></div>
+                        <div class="terminal-line"><span class="terminal-output">NAMESPACE: kong</span></div>
+                        <div class="terminal-line"><span class="terminal-output">STATUS: deployed</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get pods -n kong</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                            READY   STATUS    RESTARTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kong-controller-abc12-xyz34     1/1     Running   0          60s</span></div>
+                        <div class="terminal-line"><span class="terminal-output">kong-gateway-def56-uvw78        1/1     Running   0          60s</span></div>
+                    </div>
+                </div>
+
+                <h3>Créer le plugin Rate Limiting</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># kong-rate-limit.yaml</span>
+<span class="key">apiVersion</span>: <span class="string">configuration.konghq.com/v1</span>
+<span class="key">kind</span>: <span class="string">KongPlugin</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">rate-limit-plugin</span>
+  <span class="key">namespace</span>: <span class="string">default</span>
+<span class="key">config</span>:
+  <span class="key">minute</span>: <span class="number">10</span>
+  <span class="key">policy</span>: <span class="string">local</span>
+<span class="key">plugin</span>: <span class="string">rate-limiting</span></code></pre>
+                </div>
+
+                <h3>Créer l'Ingress Kong avec annotations</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">YAML</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code class="code-yaml"><span class="comment"># kong-ingress.yaml</span>
+<span class="key">apiVersion</span>: <span class="string">networking.k8s.io/v1</span>
+<span class="key">kind</span>: <span class="string">Ingress</span>
+<span class="key">metadata</span>:
+  <span class="key">name</span>: <span class="string">hello-kong-ingress</span>
+  <span class="key">namespace</span>: <span class="string">default</span>
+  <span class="key">annotations</span>:
+    <span class="key">konghq.com/plugins</span>: <span class="string">rate-limit-plugin</span>
+    <span class="key">konghq.com/strip-path</span>: <span class="string">"true"</span>
+<span class="key">spec</span>:
+  <span class="key">ingressClassName</span>: <span class="string">kong</span>
+  <span class="key">rules</span>:
+  - <span class="key">http</span>:
+      <span class="key">paths</span>:
+      - <span class="key">path</span>: <span class="string">/hello1</span>
+        <span class="key">pathType</span>: <span class="string">Prefix</span>
+        <span class="key">backend</span>:
+          <span class="key">service</span>:
+            <span class="key">name</span>: <span class="string">hello-kubernetes-first</span>
+            <span class="key">port</span>:
+              <span class="key">number</span>: <span class="number">80</span>
+      - <span class="key">path</span>: <span class="string">/hello2</span>
+        <span class="key">pathType</span>: <span class="string">Prefix</span>
+        <span class="key">backend</span>:
+          <span class="key">service</span>:
+            <span class="key">name</span>: <span class="string">hello-kubernetes-second</span>
+            <span class="key">port</span>:
+              <span class="key">number</span>: <span class="number">80</span></code></pre>
+                </div>
+
+                <h3>Déployer les ressources Kong</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl apply -f kong-rate-limit.yaml
+kubectl apply -f kong-ingress.yaml</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Vérification Kong</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get ingress</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                 CLASS   HOSTS   ADDRESS          PORTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-ingress        nginx   *       192.168.49.100   80      5m</span></div>
+                        <div class="terminal-line"><span class="terminal-output">hello-kong-ingress   kong    *       192.168.49.101   80      30s</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get kongplugins</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                 PLUGIN-TYPE      AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">rate-limit-plugin    rate-limiting    45s</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl http://&lt;KONG_IP&gt;/hello1</div>
+                        <div class="terminal-line"><span class="terminal-output">Hello from the first deployment!</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl http://&lt;KONG_IP&gt;/hello2</div>
+                        <div class="terminal-line"><span class="terminal-output">Hello from the second deployment!</span></div>
+                    </div>
+                </div>
+
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Obtenir l'IP de Kong
+                    </div>
+                    <p>L'IP du proxy Kong est accessible via : <code>kubectl get svc -n kong kong-gateway-proxy -o jsonpath='{.status.loadBalancer.ingress[0].ip}'</code></p>
+                </div>
+
+                <h2>6. Vérifications et tests finaux</h2>
+
+                <h3>Tester le rate limiting</h3>
+                <p>Envoyons 15 requêtes consécutives pour vérifier que le rate limiting (10 req/min) fonctionne :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Test rate limiting - 15 requêtes consécutives
+for i in {1..15}; do
+  curl -s -o /dev/null -w "%{http_code}\n" http://&lt;KONG_IP&gt;/hello1
+done</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Test Rate Limiting</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>for i in {1..15}; do curl -s -o /dev/null -w "%{http_code}\n" http://&lt;KONG_IP&gt;/hello1; done</div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-output">200</span></div>
+                        <div class="terminal-line"><span class="terminal-error">429</span></div>
+                        <div class="terminal-line"><span class="terminal-error">429</span></div>
+                        <div class="terminal-line"><span class="terminal-error">429</span></div>
+                        <div class="terminal-line"><span class="terminal-error">429</span></div>
+                        <div class="terminal-line"><span class="terminal-error">429</span></div>
+                    </div>
+                </div>
+
+                <div class="info-box error">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/>
+                        </svg>
+                        429 Too Many Requests
+                    </div>
+                    <p>Après 10 requêtes, Kong renvoie un code <code>429</code> — le rate limiting fonctionne ! Cette protection n'est <strong>pas disponible nativement avec un simple Ingress Nginx</strong>.</p>
+                </div>
+
+                <h3>Vérifier les headers de rate limiting</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Voir les headers de rate limiting de Kong
+curl -i http://&lt;KONG_IP&gt;/hello1</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Headers Kong</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl -i http://&lt;KONG_IP&gt;/hello1</div>
+                        <div class="terminal-line"><span class="terminal-output">HTTP/1.1 200 OK</span></div>
+                        <div class="terminal-line"><span class="terminal-output">X-RateLimit-Remaining-Minute: 8</span></div>
+                        <div class="terminal-line"><span class="terminal-output">X-RateLimit-Limit-Minute: 10</span></div>
+                        <div class="terminal-line"><span class="terminal-output">RateLimit-Remaining: 8</span></div>
+                        <div class="terminal-line"><span class="terminal-output">RateLimit-Limit: 10</span></div>
+                        <div class="terminal-line"><span class="terminal-output">RateLimit-Reset: 42</span></div>
+                        <div class="terminal-line"><span class="terminal-output">...</span></div>
+                    </div>
+                </div>
+
+                <h2>Commandes utiles</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Commande</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>kubectl get ingress</code></td>
+                                <td>Lister toutes les règles Ingress</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get svc -n ingress-nginx</code></td>
+                                <td>IP du contrôleur Nginx Ingress</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get svc -n kong</code></td>
+                                <td>IP du proxy Kong</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get kongplugins</code></td>
+                                <td>Lister les plugins Kong actifs</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl describe ingress &lt;name&gt;</code></td>
+                                <td>Détails d'une règle Ingress</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl logs -n kong -l app=kong-gateway</code></td>
+                                <td>Logs du gateway Kong</td>
+                            </tr>
+                            <tr>
+                                <td><code>helm list -A</code></td>
+                                <td>Lister les releases Helm installées</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Checklist de Progression</h2>
+
+                <div class="checklist">
+                    <div class="checklist-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Sections complétées
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Comprendre les différences Ingress vs API Gateway</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Déployer les deux applications hello-kubernetes</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Installer et configurer Nginx Ingress Controller</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Exposer les services via Ingress Nginx</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Installer et configurer Kong API Gateway</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Configurer le plugin rate-limiting Kong</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Vérifier le rate limiting (429 Too Many Requests)</span>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="#tp16" class="nav-btn" onclick="showSection('tp16')">
+                        <div class="nav-btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"/>
+                            </svg>
+                        </div>
+                        <div class="nav-btn-text">
+                            <div class="nav-btn-label">Précédent</div>
+                            <span class="nav-btn-title">TP 16: Namespaces &amp; Quotas</span>
+                        </div>
+                    </a>
                     <a href="#home" class="nav-btn" onclick="showSection('home')">
                         <div class="nav-btn-text" style="text-align: right;">
                             <div class="nav-btn-label">Retour</div>
@@ -1943,15 +3515,13 @@
                         </div>
                         <div class="nav-btn-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9
-l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
                             </svg>
                         </div>
                     </a>
                 </div>
             </section>
 
-</html>
 
             <!-- TP 1: PODS -->
             <section id="tp1" class="section">
@@ -3548,61 +5118,286 @@ l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
                 <h1>TP 8: Ingress - Routage HTTP</h1>
 
                 <div class="info-box info">
-                    <div class="info-box-title">Objectifs</div>
-                    <p>Exposer plusieurs services via un seul point d'entrée avec routage basé sur le host ou le path.</p>
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Objectifs
+                    </div>
+                    <p>Exposer plusieurs services via un seul point d'entrée avec routage basé sur le host ou le path, en utilisant Helm pour installer le Nginx Ingress Controller.</p>
                 </div>
 
-                <h3>Prérequis : Installer un Ingress Controller</h3>
+                <div class="info-box warning">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/>
+                        </svg>
+                        Durée estimée : 45 minutes | Difficulté : Intermédiaire
+                    </div>
+                    <p>Ce TP nécessite un cluster Kubernetes fonctionnel avec <code>kubectl</code> configuré.</p>
+                </div>
+
+                <h2>Étape 1 — Installation de Helm</h2>
+
+                <p>Helm est le gestionnaire de paquets pour Kubernetes. Installez-le via le script officiel :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Télécharger le script d'installation de Helm 3
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+
+# Rendre le script exécutable
+chmod 700 get_helm.sh
+
+# Exécuter l'installation
+./get_helm.sh
+
+# Ajouter le repo stable de Helm
+helm repo add stable "https://charts.helm.sh/stable"</code></pre>
+                </div>
 
                 <div class="terminal-block">
                     <div class="terminal-header">
                         <span class="terminal-dot red"></span>
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
-                        <span class="terminal-title">Terminal</span>
+                        <span class="terminal-title">Terminal — Installation Helm</span>
                     </div>
                     <div class="terminal-body">
-                        <div class="terminal-line"><span class="terminal-prompt">$ </span>minikube addons enable ingress</div>
-                        <div class="terminal-line"><span class="terminal-output">💡  ingress is an addon maintained by Kubernetes. For any concerns...</span></div>
-                        <div class="terminal-line"><span class="terminal-output">✅  The 'ingress' addon is enabled</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3</div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>chmod 700 get_helm.sh</div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>./get_helm.sh</div>
+                        <div class="terminal-line"><span class="terminal-output">Downloading https://get.helm.sh/helm-v3.14.0-linux-amd64.tar.gz</span></div>
+                        <div class="terminal-line"><span class="terminal-output">Verifying checksum... Done.</span></div>
+                        <div class="terminal-line"><span class="terminal-output">Preparing to install helm into /usr/local/bin</span></div>
+                        <div class="terminal-line"><span class="terminal-output">helm installed into /usr/local/bin/helm</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm version</div>
+                        <div class="terminal-line"><span class="terminal-output">version.BuildInfo{Version:"v3.14.0", GitCommit:"..."}</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm repo add stable "https://charts.helm.sh/stable"</div>
+                        <div class="terminal-line"><span class="terminal-output">"stable" has been added to your repositories</span></div>
                     </div>
                 </div>
 
-                <h3>Exercice : Créer un Ingress</h3>
+                <div class="info-box success">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Helm installé
+                    </div>
+                    <p>Helm 3 est maintenant installé et prêt à déployer des charts Kubernetes.</p>
+                </div>
+
+                <h2>Étape 2 — Installation du Nginx Ingress Controller</h2>
+
+                <p>Utilisez Helm pour installer le Nginx Ingress Controller dans votre cluster :</p>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code># Ajouter le repo ingress-nginx
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
+# Mettre à jour les repos
+helm repo update
+
+# Installer Nginx Ingress Controller
+helm install nginx-ingress ingress-nginx/ingress-nginx \
+  --set controller.publishService.enabled=true</code></pre>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Installation Nginx Ingress</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx</div>
+                        <div class="terminal-line"><span class="terminal-output">"ingress-nginx" has been added to your repositories</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm repo update</div>
+                        <div class="terminal-line"><span class="terminal-output">Hang tight while we grab the latest from your chart repositories...</span></div>
+                        <div class="terminal-line"><span class="terminal-output">...Successfully got an update from the "ingress-nginx" chart repository</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>helm install nginx-ingress ingress-nginx/ingress-nginx \</div>
+                        <div class="terminal-line"><span class="terminal-output">  --set controller.publishService.enabled=true</span></div>
+                        <div class="terminal-line"><span class="terminal-output">NAME: nginx-ingress</span></div>
+                        <div class="terminal-line"><span class="terminal-output">NAMESPACE: default</span></div>
+                        <div class="terminal-line"><span class="terminal-output">STATUS: deployed</span></div>
+                        <div class="terminal-line"><span class="terminal-output">REVISION: 1</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get pods -l app.kubernetes.io/name=ingress-nginx</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME                                        READY   STATUS    RESTARTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">nginx-ingress-controller-5d88495688-k7x2n   1/1     Running   0          45s</span></div>
+                    </div>
+                </div>
+
+                <h2>Étape 3 — Créer un Ingress</h2>
+
+                <p>Créez une ressource Ingress pour router le trafic vers vos services :</p>
 
                 <div class="code-block">
                     <div class="code-header">
                         <span class="code-lang">YAML</span>
-                        <div class="code-actions"><button class="code-btn" onclick="copyCode(this)">Copier</button></div>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
                     </div>
                     <pre><code class="code-yaml"><span class="comment"># ingress.yaml</span>
 <span class="key">apiVersion</span>: <span class="string">networking.k8s.io/v1</span>
 <span class="key">kind</span>: <span class="string">Ingress</span>
 <span class="key">metadata</span>:
-  <span class="key">name</span>: <span class="string">app-ingress</span>
-  <span class="key">annotations</span>:
-    <span class="key">nginx.ingress.kubernetes.io/rewrite-target</span>: <span class="string">/</span>
+  <span class="key">name</span>: <span class="string">nginx-ing</span>
 <span class="key">spec</span>:
   <span class="key">ingressClassName</span>: <span class="string">nginx</span>
   <span class="key">rules</span>:
-  - <span class="key">host</span>: <span class="string">app.local</span>
+  - <span class="key">host</span>: <span class="string">"myapp.local"</span>
     <span class="key">http</span>:
       <span class="key">paths</span>:
-      - <span class="key">path</span>: <span class="string">/api</span>
-        <span class="key">pathType</span>: <span class="string">Prefix</span>
+      - <span class="key">pathType</span>: <span class="string">Prefix</span>
+        <span class="key">path</span>: <span class="string">"/"</span>
         <span class="key">backend</span>:
           <span class="key">service</span>:
-            <span class="key">name</span>: <span class="string">api-service</span>
-            <span class="key">port</span>:
-              <span class="key">number</span>: <span class="number">80</span>
-      - <span class="key">path</span>: <span class="string">/</span>
-        <span class="key">pathType</span>: <span class="string">Prefix</span>
-        <span class="key">backend</span>:
-          <span class="key">service</span>:
-            <span class="key">name</span>: <span class="string">frontend-service</span>
+            <span class="key">name</span>: <span class="string">svc-nginxs</span>
             <span class="key">port</span>:
               <span class="key">number</span>: <span class="number">80</span></code></pre>
                 </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-lang">BASH</span>
+                        <div class="code-actions">
+                            <button class="code-btn" onclick="copyCode(this)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                                </svg>
+                                Copier
+                            </button>
+                        </div>
+                    </div>
+                    <pre><code>kubectl apply -f ingress.yaml</code></pre>
+                </div>
+
+                <h3>Vérification</h3>
+
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">Terminal — Vérification Ingress</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl apply -f ingress.yaml</div>
+                        <div class="terminal-line"><span class="terminal-output">ingress.networking.k8s.io/nginx-ing created</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>kubectl get ingress</div>
+                        <div class="terminal-line"><span class="terminal-output">NAME        CLASS   HOSTS          ADDRESS          PORTS   AGE</span></div>
+                        <div class="terminal-line"><span class="terminal-output">nginx-ing   nginx   myapp.local    192.168.1.100    80      15s</span></div>
+                        <div class="terminal-line"><span class="terminal-prompt">$ </span>curl -H "Host: myapp.local" http://&lt;INGRESS_IP&gt;/</div>
+                        <div class="terminal-line"><span class="terminal-output">Welcome to nginx!</span></div>
+                    </div>
+                </div>
+
+                <div class="info-box info">
+                    <div class="info-box-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        Configuration DNS locale
+                    </div>
+                    <p>Pour tester localement, ajoutez l'entrée suivante dans <code>/etc/hosts</code> :<br><code>&lt;INGRESS_IP&gt;  myapp.local</code></p>
+                </div>
+
+                <h2>Commandes utiles</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Commande</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>helm version</code></td>
+                                <td>Vérifier la version de Helm installée</td>
+                            </tr>
+                            <tr>
+                                <td><code>helm list</code></td>
+                                <td>Lister les releases Helm installées</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get ingress</code></td>
+                                <td>Lister les ressources Ingress</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl describe ingress nginx-ing</code></td>
+                                <td>Détails de l'Ingress</td>
+                            </tr>
+                            <tr>
+                                <td><code>kubectl get svc</code></td>
+                                <td>Vérifier les services exposés</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Checklist de Progression</h2>
+
+                <div class="checklist">
+                    <div class="checklist-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Sections complétées
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Installer Helm 3 via le script officiel</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Ajouter le repo stable Helm</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Installer Nginx Ingress Controller via Helm</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Créer et appliquer la ressource Ingress</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleCheck(this)">
+                        <div class="checklist-checkbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <span class="checklist-text">Tester l'accès via curl avec le header Host</span>
+                    </div>
+                </div>
+
 
                 <div class="nav-buttons">
                     <a href="#tp7" class="nav-btn" onclick="showSection('tp7')">
